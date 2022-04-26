@@ -1,0 +1,19 @@
+body {
+    background-color: #F1DDBF;
+    color: #525E75;
+    /* font-family: 'Montserrat', sans-serif; */
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    padding: 5%;
+    /* font-family: 'Montserrat', sans-serif;
+    font-weight: bold; */
+}
+
+.ball-img {
+    border-radius: 100%;
+    padding: 5%;
+}
+
