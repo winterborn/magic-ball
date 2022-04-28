@@ -1,3 +1,11 @@
+let input = document.getElementById("questionName");
+console.log(input);
+
+
+
+
+
+
 let userName1 = prompt('What is your name?')
 
 // Take input name and capitalize first letter
