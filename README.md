@@ -1,6 +1,6 @@
 # Magic 8-Ball:
 
-Project to practise user input retrieval and display, whilst creating a simple, responsive website utilising HTML, Bootstrap frameworks and CSS.
+Project to practise user input retrieval and display using JavaScript, whilst creating a simple, responsive website utilising HTML, Bootstrap frameworks and CSS.
 
 ## Built with:
 
