@@ -29,8 +29,6 @@
 
 <body>
 
-
-
   <div class="intro-text">
     <h1>ASK THE BALL</h1>
   </div>
@@ -38,18 +36,6 @@
   <div class="ball">
     <img class="ball-img" src="img/8-ball.jpeg" alt="8-ball-image">
   </div>
-
-  <!-- <div class="user-input">
-    <form action="" method="get" class="question-input-form">
-      <div class="question-input-form">
-        <label for="name"></label>
-        <input type="text" name="name" id="questionName" required>
-      </div>
-      <div class="question-input-form">
-        <input type="submit" value="Submit">
-      </div>
-    </form>
-  </div> -->
 
   <div class="interaction">
 
@@ -62,29 +48,27 @@
     </div>
 
     <div class="button">
-      <button onclick="printOutput ()">Submit</button>
+      <button onclick="ballLogicAndPrintOutput();">Submit</button>
+      <!-- This button calls external JS (ball logic) function successfully! Just need to print it, tie it into one button rather than two! -->
     </div>
 
     <div class="output">
       <p id="outputToScreen"></p>
-      <p>8-ball answer:</p>
+      <p id="magicBallAnswer">8-ball answer:</p>
     </div>
 
   </div>
 
   <script>
-    function printOutput() {
-      const myName = document.getElementById("myName").value;
-      const myQuestion = document.getElementById("myQuestion").value;
-      const capitalLetterFix = myName[0].toUpperCase() + myName.substring(1);
-      document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion;
+    function ballLogicAndPrintOutput() {
+      printOutput();
+      logic();
     }
   </script>
 
-  <!-- <div class="javascript response">
-    <script src="scripts/scripts.js"></script>
-    javascript response
-  </div> -->
+  <!-- external JS called - need to link to button onclick, then need to print output to paragraph tag inner html? -->
+  <script src="scripts/main.js">
+  </script>
 
 </body>
 
