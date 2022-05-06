@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Magic 8-Ball!</title>
+  <title>Magic 8-Ball! - Seek your fortune!</title>
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- External JavaScript -->
+  <script src="scripts/main.js"></script>
 
   <!-- Bootstrap Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -30,45 +33,36 @@
 <body>
 
   <div class="intro-text">
-    <h1>ASK THE BALL</h1>
+    <h2>ASK THE BALL</h2>
+    <h3>Seek your fortune, if you dare!</h3>
   </div>
 
-  <div class="ball">
-    <img class="ball-img" src="img/8-ball.jpeg" alt="8-ball-image">
+  <div class="hero-image">
+    <img class="ball-img" src="img/8-ball.jpeg" alt="hero-image-8-ball">
   </div>
 
   <div class="interaction">
-
     <div class="name">
       <input type="text" id="myName" placeholder="Name?">
+      <!-- User input name. -->
     </div>
 
     <div class="question">
       <textarea id="myQuestion" rows="2" cols="20" placeholder="Question?"></textarea>
+      <!-- User input question. -->
     </div>
 
     <div class="button">
       <button onclick="ballLogicAndPrintOutput();">Submit</button>
-      <!-- This button calls external JS (ball logic) function successfully! Just need to print it, tie it into one button rather than two! -->
+      <!-- Button calls external JavaScript (8 ball logic, printing of user responses to screen). -->
     </div>
 
     <div class="output">
       <p id="outputToScreen"></p>
-      <p id="magicBallAnswer">8-ball answer:</p>
+      <p id="magicBallAnswer"></p>
+      <!-- Paragraph elements to house printed content. -->
     </div>
-
   </div>
-
-  <script>
-    function ballLogicAndPrintOutput() {
-      printOutput();
-      logic();
-    }
-  </script>
-
-  <!-- external JS called - need to link to button onclick, then need to print output to paragraph tag inner html? -->
-  <script src="scripts/main.js">
-  </script>
 
 </body>
 

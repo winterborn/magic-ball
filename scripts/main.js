@@ -1,10 +1,20 @@
+// Grouped function controller to initiate print out of user responses, together with 8-ball logic output.
+function ballLogicAndPrintOutput() {
+  printOutput();
+  logic();
+}
+
+
+// Take user input (name and question) from html paragraph IDs; fix missing capital letters if entered without; grouped output to screen.
 function printOutput() {
   const myName = document.getElementById("myName").value;
   const myQuestion = document.getElementById("myQuestion").value;
   const capitalLetterFix = myName[0].toUpperCase() + myName.substring(1);
-  document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + "." + "My reply is..." + logic();
+  document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
 }
 
+
+// 8-ball logic using switch / case to randomize through potential output responses.
 function logic() {
 
   let randomNumber = Math.floor(Math.random() * 8);
