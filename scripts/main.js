@@ -13,12 +13,12 @@ function printOutput() {
   document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
   
 // Check whether question includes open-ended question words, if open-ended question words then print error, else return name, question, logic response.
-  if (document.getElementById("outputToScreen").innerHTML.includes('what', 'What', 'how', 'How', 'where', 'Where', 'when', 'When', 'why', 'Why')) {
-    console.log("I cannot answer this type of question, ask another.");
-    document.getElementById("outputToScreen").innerHTML = "I cannot answer this type of question, ask another.";
-  } else {
-    document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
-  }
+  // if (document.getElementById("outputToScreen").innerHTML.includes('what') || ('What') || ('how') {
+  //   console.log("I cannot answer this type of question, ask another.");
+  //   document.getElementById("outputToScreen").innerHTML = "I cannot answer this type of question, ask another.";
+  // } else {
+  //   document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
+  // }
 }
 
 
