@@ -27,41 +27,42 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-
 </head>
 
 <body>
+  <div class="container-fluid">
 
-  <div class="intro-text">
-    <h2>ASK THE BALL</h2>
-    <h3>Seek your fortune, if you dare!</h3>
-  </div>
-
-  <div class="hero-image">
-    <img class="ball-img" src="img/8-ball.jpeg" alt="hero-image-8-ball">
-  </div>
-
-  <div class="interaction">
-    <div class="name">
-      <input type="text" id="myName" placeholder="Name?">
-      <!-- User input name. -->
+    <div class="intro-text">
+      <h3>Seek your fortune, if you dare!</h3>
     </div>
 
-    <div class="question">
-      <textarea id="myQuestion" rows="2" cols="20" placeholder="Question?"></textarea>
-      <!-- User input question. -->
+    <div class="hero-image">
+      <img class="ball-img" src="img/8-ball.jpeg" alt="hero-image-8-ball">
     </div>
 
-    <div class="button">
-      <button onclick="ballLogicAndPrintOutput();">Submit</button>
-      <!-- Button calls external JavaScript (8 ball logic, printing of user responses to screen). -->
+    <div class="interaction">
+      <div class="name">
+        <input type="text" id="myName" placeholder="Name?">
+        <!-- User input name -->
+      </div>
+
+      <div class="question">
+        <textarea id="myQuestion" rows="2" cols="20" placeholder="Question?"></textarea>
+        <!-- User input question -->
+      </div>
+
+      <div class="button">
+        <button onclick="ballLogicAndPrintOutput();">Submit</button>
+        <!-- Button calls external JavaScript (8 ball logic, printing of user responses to screen) -->
+      </div>
+
+      <div class="output">
+        <p id="outputToScreen"></p>
+        <p id="magicBallAnswer"></p>
+        <!-- Paragraph elements to house printed content -->
+      </div>
     </div>
 
-    <div class="output">
-      <p id="outputToScreen"></p>
-      <p id="magicBallAnswer"></p>
-      <!-- Paragraph elements to house printed content. -->
-    </div>
   </div>
 
 </body>
