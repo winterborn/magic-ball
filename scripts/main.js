@@ -11,17 +11,18 @@ function printOutput() {
   const myQuestion = document.getElementById("myQuestion").value;
   const capitalLetterFix = myName[0].toUpperCase() + myName.substring(1);
   document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
-  
-// Check whether question includes open-ended question words, if open-ended question words then print error, else return name, question, logic response.
-  // if (document.getElementById("outputToScreen").innerHTML.includes('what') || ('What') || ('how') {
-  //   console.log("I cannot answer this type of question, ask another.");
-  //   document.getElementById("outputToScreen").innerHTML = "I cannot answer this type of question, ask another.";
-  // } else {
-  //   document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
-  // }
+
+  // Check whether question includes open-ended question words, if open-ended question words then print error, else return name, question, logic response.
+  if (document.getElementById("outputToScreen").innerHTML.includes('who') ||
+    document.getElementById("outputToScreen").innerHTML.includes('what') ||
+    document.getElementById("outputToScreen").innerHTML.includes('where') ||
+    document.getElementById("outputToScreen").innerHTML.includes('how') ||
+    document.getElementById("outputToScreen").innerHTML.includes('why')) {
+    document.getElementById("outputToScreen").innerHTML = "I cannot answer this type of question, ask another...";
+  } else {
+    document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
+  }
 }
-
-
 
 
 
@@ -69,8 +70,8 @@ function logic() {
       break;
 
     case 7:
-      console.log("Signs point to yes");
-      return ("Signs point to yes");
+      console.log("Signs are pointing to yes");
+      return ("Signs are pointing to yes");
       break;
 
     case 8:
@@ -84,6 +85,3 @@ function logic() {
   }
   console.log(`${eightBall}`);
 }
-
-
-
