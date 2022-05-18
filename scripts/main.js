@@ -10,7 +10,7 @@ function printOutput() {
   const myName = document.getElementById("myName").value;
   const myQuestion = document.getElementById("myQuestion").value;
   const capitalLetterFix = myName[0].toUpperCase() + myName.substring(1);
-  document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
+  document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + " you asked, " + myQuestion + " " + "My reply is..." + logic();
 
   // Check whether question includes open-ended question words, if open-ended question words then print error, else return name, question, logic response.
   if (document.getElementById("outputToScreen").innerHTML.includes('who') ||
@@ -22,9 +22,14 @@ function printOutput() {
   } else {
     document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + " " + "My reply is..." + logic();
   }
+
+  // // Check for question mark.
+  // if (document.getElementById("outputToScreen").innerHTML.includes("?")) {
+  //   document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + " you asked, " + myQuestion + " " + "My reply is..." + logic();
+  // } else {
+  //   document.getElementById("outputToScreen").innerHTML = capitalLetterFix + ", " + "you asked, " + myQuestion + "?" + " " + "My reply is..." + logic();
+  // }
 }
-
-
 
 
 // 8-ball logic using switch / case to randomize through potential output responses.
@@ -45,8 +50,8 @@ function logic() {
       break;
 
     case 2:
-      console.log("Do not count on it");
-      return ("Do not count on it");
+      console.log("Don't count on it");
+      return ("Don't count on it");
       break;
 
     case 3:
@@ -55,8 +60,8 @@ function logic() {
       break;
 
     case 4:
-      console.log("Outlook not so good");
-      return ("Outlook not so good");
+      console.log("Concentrate and ask again...");
+      return ("Concentrate and ask again...");
       break;
 
     case 5:
@@ -75,8 +80,8 @@ function logic() {
       break;
 
     case 8:
-      console.log("It is certain!");
-      return ("It is certain!");
+      console.log("Without a doubt!");
+      return ("Without a doubt!");
       break;
 
     default:
